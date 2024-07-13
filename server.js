@@ -1,5 +1,9 @@
 import app from "./app.js";
 import cloudinary from "cloudinary";
+import { dbConnection } from "./database/dbConnection.js";
+
+// Connect to the database
+dbConnection();
 
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLIENT_NAME,
